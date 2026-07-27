@@ -1,9 +1,20 @@
 import type { Metadata } from "next";
-import { Archivo_Black, DM_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const display = Archivo_Black({ variable: "--font-display", weight: "400", subsets: ["latin"] });
-const body = DM_Sans({ variable: "--font-body", subsets: ["latin"] });
+const display = localFont({
+  src: "./fonts/archivo-black.ttf",
+  variable: "--font-display",
+  weight: "400",
+});
+const body = localFont({
+  src: [
+    { path: "./fonts/dm-sans-400.ttf", weight: "400" },
+    { path: "./fonts/dm-sans-600.ttf", weight: "600" },
+    { path: "./fonts/dm-sans-700.ttf", weight: "700" },
+  ],
+  variable: "--font-body",
+});
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
