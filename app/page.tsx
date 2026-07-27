@@ -24,6 +24,9 @@ const faqs = [
   ["¿Puedo mezclar sabores?", "Sí. En los packs mixtos podés armar tu combinación favorita entre los sabores disponibles."],
 ];
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+const asset = (path: string) => `${basePath}${path}`;
+
 function Arrow() {
   return <span aria-hidden="true">↗</span>;
 }
@@ -54,8 +57,8 @@ export default function Home() {
           </div>
         </div>
         <div className="heroMedia">
-          <video autoPlay muted loop playsInline poster="/media/1783991429653.png" aria-label="Latas de Groovy Matcha en movimiento">
-            <source src="/media/gemini_generated_video_9b763c39.mp4" type="video/mp4" />
+          <video autoPlay muted loop playsInline poster={asset("/media/1783991429653.png")} aria-label="Latas de Groovy Matcha en movimiento">
+            <source src={asset("/media/gemini_generated_video_9b763c39.mp4")} type="video/mp4" />
           </video>
           <div className="stamp">SHAKE<br />YOUR<br />DAY</div>
         </div>
@@ -83,7 +86,7 @@ export default function Home() {
 
       <section className="flavors" id="sabores">
         <div className="flavorImage">
-          <img src="/media/1783991429653.png" alt="Tres sabores de Groovy Matcha Co." />
+          <img src={asset("/media/1783991429653.png")} alt="Tres sabores de Groovy Matcha Co." />
         </div>
         <div className="flavorCopy">
           <p className="eyebrow">ELEGÍ TU MOOD</p>
@@ -116,7 +119,7 @@ export default function Home() {
 
       <section className="packs section" id="packs">
         <div className="packVisual">
-          <img src="/media/1783991539763.png" alt="Latas Groovy Matcha Mango Groove y Vanilla Dream en hielo" />
+          <img src={asset("/media/1783991539763.png")} alt="Latas Groovy Matcha Mango Groove y Vanilla Dream en hielo" />
           <div className="roundLabel">MIX<br />& MATCH</div>
         </div>
         <div className="packContent">
@@ -156,7 +159,7 @@ export default function Home() {
       </section>
 
       <section className="finalCta" id="final">
-        <img src="/media/1783991010562.png" alt="" />
+        <img src={asset("/media/1783991010562.png")} alt="" />
         <div>
           <p className="eyebrow">TU DÍA PIDE OTRA ENERGÍA</p>
           <h2>GET IN THE<br /><em>GROOVE.</em></h2>
