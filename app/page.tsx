@@ -60,7 +60,6 @@ export default function Home() {
           <video autoPlay muted loop playsInline poster={asset("/media/1783991429653.png")} aria-label="Latas de Groovy Matcha en movimiento">
             <source src={asset("/media/gemini_generated_video_9b763c39.mp4")} type="video/mp4" />
           </video>
-          <div className="stamp">SHAKE<br />YOUR<br />DAY</div>
         </div>
       </section>
 
