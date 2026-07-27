@@ -74,7 +74,7 @@ export default function Home() {
             <span>DESDE $3.325<br />POR LATA</span>
           </div>
           <div className="heroWords" aria-hidden="true">
-            <span>FOCO LIMPIO</span>
+            <span>SHAKE &amp; SMILE</span>
             <span>ENERGÍA NATURAL</span>
             <span>MATCHA MOOD</span>
             <span>GOOD VIBES</span>
