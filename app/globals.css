@@ -32,6 +32,7 @@ h1 em,h2 em { color:var(--orange); font-style:normal; -webkit-text-stroke:2px va
 .heroText { max-width:560px; font-size:1.15rem; line-height:1.45; margin:1.4rem 0 1.6rem; }
 .heroActions { display:flex; align-items:center; gap:1.5rem; }
 .heroActions span { font-size:.68rem; font-weight:800; letter-spacing:.08em; line-height:1.4; }
+.heroWords { display:none; }
 .button { display:inline-flex; justify-content:space-between; align-items:center; gap:2rem; padding:1.15rem 1.35rem; border-radius:4px; font-size:.8rem; font-weight:900; letter-spacing:.06em; }
 .button.dark { background:var(--ink); color:var(--cream); }
 .button.light { background:var(--cream); color:var(--ink); min-width:230px; }
@@ -41,6 +42,11 @@ h1 em,h2 em { color:var(--orange); font-style:normal; -webkit-text-stroke:2px va
 .ticker { overflow:hidden; background:var(--ink); color:var(--cream); padding:1.1rem 0; font-family:var(--font-display); font-size:1.25rem; white-space:nowrap; }
 .ticker div { width:max-content; animation:ticker 20s linear infinite; }
 @keyframes ticker { to { transform:translateX(-50%); } }
+@keyframes heroWord {
+  0%,24% { opacity:0; transform:translateY(18px) rotate(-2deg); }
+  5%,19% { opacity:1; transform:translateY(0) rotate(-2deg); }
+  100% { opacity:0; transform:translateY(-12px) rotate(-2deg); }
+}
 .section { padding:8rem 5vw; }
 .sectionIntro { display:grid; grid-template-columns:1fr 2fr; align-items:start; margin-bottom:5rem; }
 .benefitGrid { display:grid; grid-template-columns:repeat(3,1fr); border-top:2px solid var(--ink); }
@@ -119,6 +125,7 @@ details p { max-width:650px; line-height:1.55; color:#5b5147; }
 @media (max-width:640px) {
   h1 { max-width:100%; font-size:clamp(2.9rem,15vw,3.45rem); letter-spacing:-.055em; }h2{font-size:clamp(2.5rem,14vw,3.4rem)}.section{padding:5.5rem 1.25rem}.nav{padding:0 1.25rem;height:74px}
   .navCta{display:none}.heroCopy{width:100%;min-width:0;min-height:100svh;padding:132px 1.25rem 42px;justify-content:flex-start}.heroText{max-width:100%;font-size:1rem;line-height:1.45;margin:1.2rem 0 1.5rem}.heroActions{max-width:100%;align-items:flex-start;flex-direction:column}.heroActions span{display:none}
+  .heroWords{display:block;position:relative;width:100%;height:5rem;margin-top:auto;overflow:hidden;font-family:var(--font-display);font-size:clamp(2.25rem,12vw,3.4rem);line-height:.85;letter-spacing:-.04em;text-transform:uppercase}.heroWords span{position:absolute;left:0;bottom:.2rem;width:100%;opacity:0;animation:heroWord 12s infinite both}.heroWords span:nth-child(2){color:var(--orange);animation-delay:3s}.heroWords span:nth-child(3){-webkit-text-stroke:1.5px var(--ink);color:transparent;animation-delay:6s}.heroWords span:nth-child(4){color:var(--cream);animation-delay:9s}
   .heroMedia{min-height:0;max-height:none;height:auto;aspect-ratio:4/5;overflow:hidden}.heroMedia video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}.ticker{padding:1rem 1.1rem;font-size:.78rem;letter-spacing:.02em}.ticker div{animation:ticker 18s linear infinite}
   .sectionIntro{margin-bottom:3rem}.benefitGrid{grid-template-columns:1fr}.benefitGrid article,.benefitGrid article+article{padding:1.5rem 0;border-right:0;border-bottom:1px solid;min-height:0}.benefitGrid h3{margin:2rem 0 .75rem}
   .flavorImage{height:440px}.flavorCopy{padding:5rem 1.25rem}.flavorDots{flex-wrap:wrap;margin-top:3rem}
@@ -129,4 +136,4 @@ details p { max-width:650px; line-height:1.55; color:#5b5147; }
   .footer{grid-template-columns:1fr}.footerBrand{font-size:3.1rem}.footer small{grid-column:1}
 }
 
-@media (prefers-reduced-motion:reduce) { html{scroll-behavior:auto}.ticker div{animation:none} }
+@media (prefers-reduced-motion:reduce) { html{scroll-behavior:auto}.ticker div,.heroWords span{animation:none}.heroWords span:first-child{opacity:1;transform:none} }
