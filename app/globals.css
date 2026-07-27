@@ -32,7 +32,7 @@ h1 em,h2 em { color:var(--orange); font-style:normal; -webkit-text-stroke:2px va
 .heroText { max-width:560px; font-size:1.15rem; line-height:1.45; margin:1.4rem 0 1.6rem; }
 .heroActions { display:flex; align-items:center; gap:1.5rem; }
 .heroActions span { font-size:.68rem; font-weight:800; letter-spacing:.08em; line-height:1.4; }
-.heroWords { display:none; }
+.matchaParallax { display:none; }
 .button { display:inline-flex; justify-content:space-between; align-items:center; gap:2rem; padding:1.15rem 1.35rem; border-radius:4px; font-size:.8rem; font-weight:900; letter-spacing:.06em; }
 .button.dark { background:var(--ink); color:var(--cream); }
 .button.light { background:var(--cream); color:var(--ink); min-width:230px; }
@@ -42,9 +42,9 @@ h1 em,h2 em { color:var(--orange); font-style:normal; -webkit-text-stroke:2px va
 .ticker { overflow:hidden; background:var(--ink); color:var(--cream); padding:1.1rem 0; font-family:var(--font-display); font-size:1.25rem; white-space:nowrap; }
 .ticker div { width:max-content; animation:ticker 20s linear infinite; }
 @keyframes ticker { to { transform:translateX(-50%); } }
-@keyframes heroWord {
-  0%,100% { transform:translateY(0) rotate(var(--tilt)); }
-  50% { transform:translateY(-8px) rotate(calc(var(--tilt) + 2deg)); }
+@keyframes iceParallax {
+  from { transform:translateY(-6%); }
+  to { transform:translateY(8%); }
 }
 .section { padding:8rem 5vw; }
 .sectionIntro { display:grid; grid-template-columns:1fr 2fr; align-items:start; margin-bottom:5rem; }
@@ -124,7 +124,7 @@ details p { max-width:650px; line-height:1.55; color:#5b5147; }
 @media (max-width:640px) {
   h1 { max-width:100%; font-size:clamp(2.9rem,15vw,3.45rem); letter-spacing:-.055em; }h2{font-size:clamp(2.5rem,14vw,3.4rem)}.section{padding:5.5rem 1.25rem}.nav{padding:0 1.25rem;height:74px}
   .navCta{display:none}.heroCopy{width:100%;min-width:0;min-height:100svh;padding:132px 1.25rem 42px;justify-content:flex-start}.heroText{max-width:100%;font-size:1rem;line-height:1.45;margin:1.2rem 0 1.5rem}.heroActions{max-width:100%;align-items:flex-start;flex-direction:column}.heroActions span{display:none}
-  .heroWords{display:block;position:relative;flex:1;width:100%;min-height:12rem;margin-top:2rem;overflow:hidden;font-family:var(--font-display);font-size:clamp(.95rem,4.8vw,1.35rem);line-height:.9;letter-spacing:-.02em;text-transform:uppercase}.heroWords span{--tilt:-3deg;position:absolute;width:max-content;max-width:90%;padding:.62rem .82rem .55rem;border:2px solid var(--ink);border-radius:999px;background:var(--cream);box-shadow:3px 3px 0 var(--ink);white-space:nowrap;animation:heroWord 3.8s ease-in-out infinite;cursor:pointer;user-select:none;transition:filter .15s,scale .15s}.heroWords span:before{content:"✦";margin-right:.45rem;font-family:Arial,sans-serif;font-size:.7em}.heroWords span:active{filter:brightness(1.08);scale:.95}.heroWords span:nth-child(1){left:.15rem;top:3%}.heroWords span:nth-child(2){--tilt:3deg;right:.2rem;top:29%;background:var(--orange);animation-delay:-1s}.heroWords span:nth-child(3){--tilt:-2deg;left:8%;top:56%;background:#f4b5c1;animation-delay:-2s}.heroWords span:nth-child(4){--tilt:2deg;right:.15rem;top:79%;background:var(--darkgreen);color:var(--cream);animation-delay:-3s}
+  .matchaParallax{display:block;position:relative;flex:1;width:calc(100% + 2.5rem);min-height:14rem;margin:2rem -1.25rem -42px;overflow:hidden;background:#74c9ef}.matchaParallax img{position:absolute;inset:-8% 0 auto;width:100%;height:116%;object-fit:cover;object-position:center bottom;animation:iceParallax linear both;animation-timeline:view();animation-range:entry 0% exit 100%;will-change:transform}
   .heroMedia{min-height:0;max-height:none;height:auto;aspect-ratio:4/5;overflow:hidden}.heroMedia video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}.ticker{padding:1rem 1.1rem;font-size:.78rem;letter-spacing:.02em}.ticker div{animation:ticker 18s linear infinite}
   .sectionIntro{margin-bottom:3rem}.benefitGrid{grid-template-columns:1fr}.benefitGrid article,.benefitGrid article+article{padding:1.5rem 0;border-right:0;border-bottom:1px solid;min-height:0}.benefitGrid h3{margin:2rem 0 .75rem}
   .flavorImage{height:440px}.flavorCopy{padding:5rem 1.25rem}.flavorDots{flex-wrap:wrap;margin-top:3rem}
@@ -135,4 +135,4 @@ details p { max-width:650px; line-height:1.55; color:#5b5147; }
   .footer{grid-template-columns:1fr}.footerBrand{font-size:3.1rem}.footer small{grid-column:1}
 }
 
-@media (prefers-reduced-motion:reduce) { html{scroll-behavior:auto}.ticker div,.heroWords span{animation:none} }
+@media (prefers-reduced-motion:reduce) { html{scroll-behavior:auto}.ticker div,.matchaParallax img{animation:none;transform:none} }

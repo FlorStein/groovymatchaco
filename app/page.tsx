@@ -73,11 +73,8 @@ export default function Home() {
             <a className="button dark" href="#packs">ENCONTRÁ TU SABOR <Arrow /></a>
             <span>DESDE $3.325<br />POR LATA</span>
           </div>
-          <div className="heroWords" aria-hidden="true">
-            <span>SHAKE &amp; SMILE</span>
-            <span>ENERGÍA NATURAL</span>
-            <span>MATCHA MOOD</span>
-            <span>GOOD VIBES</span>
+          <div className="matchaParallax" aria-hidden="true">
+            <img src={asset("/media/matcha-ice-parallax.png")} alt="" />
           </div>
         </div>
         <div className="heroMedia">
