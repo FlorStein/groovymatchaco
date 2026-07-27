@@ -74,7 +74,7 @@ export default function Home() {
             <span>DESDE $3.325<br />POR LATA</span>
           </div>
           <div className="matchaParallax" aria-hidden="true">
-            <img src={asset("/media/matcha-ice-parallax.png")} alt="" />
+            <img src={asset("/media/matcha-ice-overlay.png")} alt="" />
           </div>
         </div>
         <div className="heroMedia">
