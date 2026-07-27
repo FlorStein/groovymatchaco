@@ -66,8 +66,8 @@ export default function Home() {
           </div>
         </div>
         <div className="heroMedia">
-          <video autoPlay muted loop playsInline poster={asset("/media/1783991429653.png")} aria-label="Latas de Groovy Matcha en movimiento">
-            <source src={asset("/media/gemini_generated_video_9b763c39.mp4")} type="video/mp4" />
+          <video autoPlay muted loop playsInline poster={asset("/media/video-project-poster.png")} aria-label="Latas de Groovy Matcha en movimiento">
+            <source src={asset("/media/video-project-final.mp4")} type="video/mp4" />
           </video>
         </div>
       </section>
