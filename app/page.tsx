@@ -74,12 +74,6 @@ export default function Home() {
             <span>DESDE $3.325<br />POR LATA</span>
           </div>
           <div className="matchaParallax" aria-hidden="true">
-            <div className="iceWords">
-              <span>SHAKE &amp; SMILE</span>
-              <span>ENERGÍA NATURAL</span>
-              <span>MATCHA MOOD</span>
-              <span>GOOD VIBES</span>
-            </div>
             <img src={asset("/media/matcha-ice-overlay.png")} alt="" />
           </div>
         </div>
