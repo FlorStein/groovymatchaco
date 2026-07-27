@@ -113,7 +113,7 @@ details p { max-width:650px; line-height:1.55; color:#5b5147; }
 @media (max-width:640px) {
   h1 { max-width:100%; font-size:clamp(2.9rem,15vw,3.45rem); letter-spacing:-.055em; }.section{padding:5.5rem 1.25rem}.nav{padding:0 1.25rem;height:74px}
   .navCta{display:none}.heroCopy{width:100%;min-width:0;min-height:100svh;padding:104px 1.1rem 42px;justify-content:center}.heroText{max-width:100%;font-size:1rem;line-height:1.45;margin:1.2rem 0 1.5rem}.heroActions{max-width:100%;align-items:flex-start;flex-direction:column}.heroActions span{display:none}
-  .heroMedia{min-height:300px;max-height:340px}.ticker{padding:1rem 1.1rem;font-size:.78rem;letter-spacing:.02em}.ticker div{animation:none}
+  .heroMedia{min-height:300px;max-height:340px}.ticker{padding:1rem 1.1rem;font-size:.78rem;letter-spacing:.02em}.ticker div{animation:ticker 18s linear infinite}
   .sectionIntro{margin-bottom:3rem}.benefitGrid{grid-template-columns:1fr}.benefitGrid article,.benefitGrid article+article{padding:1.5rem 0;border-right:0;border-bottom:1px solid;min-height:0}.benefitGrid h3{margin:2rem 0 .75rem}
   .flavorImage{height:440px}.flavorCopy{padding:5rem 1.25rem}.flavorDots{flex-wrap:wrap;margin-top:3rem}
   .reviewGrid{grid-template-columns:1fr}.reviewGrid article{min-height:260px}
