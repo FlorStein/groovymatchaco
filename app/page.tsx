@@ -24,6 +24,20 @@ const faqs = [
   ["¿Puedo mezclar sabores?", "Sí. En los packs mixtos podés armar tu combinación favorita entre los sabores disponibles."],
 ];
 
+const flavorImages = [
+  ["1783991010562.png", "Original Vibes"],
+  ["1783991033509.png", "Berry Bliss"],
+  ["1783991045193.png", "Vanilla Dream"],
+  ["1783991154078.png", "Lavender Haze"],
+  ["1783991253147.png", "Chai Spice Up"],
+  ["1783991429653.png", "Selección Groovy"],
+  ["1783991539763.png", "Mango Groove y Vanilla Dream"],
+  ["1783991567011.png", "Original Vibes"],
+  ["1783991584638.png", "Berry Bliss"],
+  ["1783992051156.png", "Lavender Haze"],
+  ["1783992406101.png", "Mango Groove"],
+];
+
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 const asset = (path: string) => `${basePath}${path}`;
 
@@ -103,7 +117,16 @@ export default function Home() {
           <a className="textLink" href="#packs">VER TODOS LOS PACKS <Arrow /></a>
           <div className="flavorDots" aria-label="Sabores disponibles">
             <span className="green">ORIGINAL</span><span className="pink">BERRY</span><span className="orange">CHAI</span>
+            <span>VANILLA</span><span>LAVENDER</span><span>MANGO</span>
           </div>
+        </div>
+        <div className="flavorGallery" aria-label="Galería de todos los sabores">
+          {flavorImages.map(([image, flavor]) => (
+            <figure key={image}>
+              <img src={asset(`/media/${image}`)} alt={`Groovy Matcha ${flavor}`} loading="lazy" />
+              <figcaption>{flavor}</figcaption>
+            </figure>
+          ))}
         </div>
       </section>
 
