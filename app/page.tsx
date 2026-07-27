@@ -30,11 +30,6 @@ const flavorImages = [
   ["1783991045193.png", "Vanilla Dream"],
   ["1783991154078.png", "Lavender Haze"],
   ["1783991253147.png", "Chai Spice Up"],
-  ["1783991429653.png", "Selección Groovy"],
-  ["1783991539763.png", "Mango Groove y Vanilla Dream"],
-  ["1783991567011.png", "Original Vibes"],
-  ["1783991584638.png", "Berry Bliss"],
-  ["1783992051156.png", "Lavender Haze"],
   ["1783992406101.png", "Mango Groove"],
 ];
 
