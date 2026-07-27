@@ -44,6 +44,15 @@ export default function Home() {
           <a href="#faq">FAQ</a>
         </nav>
         <a className="navCta" href="#packs">COMPRAR <Arrow /></a>
+        <details className="mobileMenu">
+          <summary aria-label="Abrir menú de navegación"><span></span><span></span><span></span></summary>
+          <div>
+            <a href="#beneficios">Por qué matcha</a>
+            <a href="#sabores">Sabores</a>
+            <a href="#faq">FAQ</a>
+            <a href="#packs">Comprar <Arrow /></a>
+          </div>
+        </details>
       </header>
 
       <section className="hero" id="top">
