@@ -3,7 +3,7 @@
 :root { --cream:#f5efd9; --ink:#2b241d; --green:#9fbc72; --darkgreen:#173e2d; --pink:#ef8e9d; --orange:#dc7d3a; }
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; }
-body { margin:0; background:var(--cream); color:var(--ink); font-family:var(--font-body), sans-serif; }
+body { margin:0; overflow-x:hidden; background:var(--cream); color:var(--ink); font-family:var(--font-body), sans-serif; }
 a { color:inherit; text-decoration:none; }
 img, video { width:100%; display:block; }
 .eyebrow { font-size:.75rem; font-weight:800; letter-spacing:.14em; }
@@ -102,9 +102,9 @@ details p { max-width:650px; line-height:1.55; color:#5b5147; }
   .faq { grid-template-columns:1fr; }
 }
 @media (max-width:640px) {
-  h1 { font-size:3.75rem; }.section{padding:5.5rem 1.25rem}.nav{padding:0 1.25rem;height:74px}
-  .navCta{padding:.7rem .9rem;font-size:.7rem}.heroCopy{padding:110px 1.25rem 50px;min-height:570px}.heroText{font-size:1.05rem;margin:1.2rem 0 1.5rem}.heroActions{align-items:flex-start;flex-direction:column}.heroActions span{display:none}
-  .heroMedia{min-height:360px;max-height:420px}.heroMedia video{object-position:center 18%}.stamp{right:18px;bottom:18px}.ticker{font-size:1rem}
+  h1 { max-width:100%; font-size:clamp(2.9rem,15vw,3.45rem); letter-spacing:-.055em; }.section{padding:5.5rem 1.25rem}.nav{padding:0 1.25rem;height:74px}
+  .navCta{display:none}.heroCopy{width:100%;min-width:0;min-height:100svh;padding:104px 1.1rem 42px;justify-content:center}.heroText{max-width:100%;font-size:1rem;line-height:1.45;margin:1.2rem 0 1.5rem}.heroActions{max-width:100%;align-items:flex-start;flex-direction:column}.heroActions span{display:none}
+  .heroMedia{min-height:390px;max-height:430px}.heroMedia video{object-position:center 18%}.stamp{right:18px;bottom:18px}.ticker{font-size:1rem}
   .sectionIntro{margin-bottom:3rem}.benefitGrid{grid-template-columns:1fr}.benefitGrid article,.benefitGrid article+article{padding:1.5rem 0;border-right:0;border-bottom:1px solid;min-height:0}.benefitGrid h3{margin:2rem 0 .75rem}
   .flavorImage{height:440px}.flavorCopy{padding:5rem 1.25rem}.flavorDots{flex-wrap:wrap;margin-top:3rem}
   .reviewGrid{grid-template-columns:1fr}.reviewGrid article{min-height:260px}
